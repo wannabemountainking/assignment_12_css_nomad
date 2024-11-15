@@ -2,3 +2,94 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
 /* WRITE YOUR CODE BELOW */
 
+:root {
+    --main-black: #222222;
+    --main-gray: #B0AFB0;
+    --background-gray: #F7F7F7;
+    --background-white: #FFFFFF;
+}
+
+body {
+    font-family: "Arial Black", serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--background-gray);
+    padding: 200px
+}
+
+.album-section {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 40px;
+    border-radius: 60px;
+    border: none;
+    background-color: var(--background-white);
+    box-shadow: 2px 2px 50px 3px rgba(0, 0, 0, 0.3);
+}
+
+.album-section header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 36px;
+}
+
+.album-section header > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.album-section__back {
+    align-items: flex-start;
+}
+
+.album-section__search {
+    align-items: flex-end;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.album-section__music-picked {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.album-section__music-picked img {
+    width:250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 50px 0 100px 0;
+}
+
+.album__music-picked__artist {
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.album__music-picked__genre {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.album__music-picked__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
