@@ -16,13 +16,13 @@ body {
     justify-content: space-around;
     align-items: center;
     background-color: var(--background-gray);
-    padding: 200px
+    padding: 180px
 }
 
 .album-section {
     display: flex;
     flex-direction: column;
-    padding: 100px 40px;
+    padding: 80px 40px;
     border-radius: 60px;
     border: none;
     background-color: var(--background-white);
@@ -58,7 +58,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 30px;
 }
 
 .album-section__music-picked {
@@ -73,7 +73,8 @@ main {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 50px 0 100px 0;
+    margin: 30px 0 100px 0;
+    box-shadow: 1px 10px 30px #393727;
 }
 
 .album__music-picked__artist {
@@ -85,11 +86,78 @@ main {
 .album__music-picked__genre {
     font-size: 36px;
     font-weight: 400;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+    color: var(--main-gray);
 }
 
 .album__music-picked__btn {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.album__music-picked__btn button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 600;
+    height: 90px;
+    width: 250px;
+    border-radius: 50px;
+    border: none;
+}
+
+.album__shuffle {
+    margin-right: 50px;
+    color: #CCCCCC;
+    background-color: var(--main-black);
+}
+
+.album__likes {
+    margin-left: 50px;
+    background-color: var(--background-white);
+    box-shadow: 1px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.album__likes-icon {
+    font-size: 45px;
+    padding-right: 15px;
+}
+
+.album__likes-count {
+    font-size: 38px;
+    font-weight: 600;
+    color: var(--main-gray);
+}
+
+.album__musics {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.album__music-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.album__music-detail__cover img {
+    height: 170px;
+    width: 170px;
+    border-radius: 30px;
+    object-fit: cover;
+    margin-top: 50px;
+}
+
+.album__music-info {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
