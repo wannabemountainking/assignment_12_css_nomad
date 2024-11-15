@@ -5,6 +5,7 @@
 :root {
     --main-black: #222222;
     --main-gray: #B0AFB0;
+    --item-gray: #EAEAEA;
     --background-gray: #F7F7F7;
     --background-white: #FFFFFF;
     --main-box-shadow: 1px 10px 30px rgba(0, 0, 0, 0.1)
@@ -306,9 +307,9 @@ main > img {
     align-items: center;
     justify-content: flex-start;
     height: 4px;
-    border: 1px solid var(--main-gray);
+    border: 1px solid var(--item-gray);
     width: 100%;
-    background-color: var(--main-gray);
+    background-color: var(--item-gray);
     margin-bottom: 100px;
 }
 
@@ -333,5 +334,38 @@ main > img {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.play__controllers i {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin: 0 25px;
+
+}
+
+.play__controllers__circle {
+    height: 130px;
+    width: 130px;
+    border: 1px solid var(--main-black);
+    background-color: var(--main-black);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play__controllers i:first-child, .play__controllers i:last-child {
+    color: var(--item-gray);
+}
+
+.play__controllers__circle > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--background-white);
 }
