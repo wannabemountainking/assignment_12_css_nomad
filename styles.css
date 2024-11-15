@@ -7,39 +7,43 @@
     --main-gray: #B0AFB0;
     --background-gray: #F7F7F7;
     --background-white: #FFFFFF;
+    --main-box-shadow: 1px 10px 30px rgba(0, 0, 0, 0.1)
 }
 
 body {
     font-family: "Arial Black", serif;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--background-gray);
-    padding: 180px
+    padding: 180px;
 }
 
-.album-section {
+.album-section, .play-section {
+    width: 700px;
+    height: 1400px;
     display: flex;
     flex-direction: column;
     padding: 80px 40px;
     border-radius: 60px;
     border: none;
     background-color: var(--background-white);
-    box-shadow: 2px 2px 50px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--main-box-shadow);
+    position: relative;
 }
 
-.album-section header {
+.album-section header, .play-section header {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     font-size: 36px;
 }
 
-.album-section header > div {
+.album-section header > div, .play-section header > div {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     width: 50px;
     height: 50px;
@@ -69,24 +73,24 @@ main {
 }
 
 .album-section__music-picked img {
-    width:250px;
-    height: 250px;
+    width:300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 30px 0 100px 0;
-    box-shadow: 1px 10px 30px #393727;
+    margin: 30px 50px 70px 50px;
+    box-shadow: 1px 10px 20px #393727;
 }
 
 .album__music-picked__artist {
-    font-size: 60px;
+    font-size: 52px;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .album__music-picked__genre {
     font-size: 36px;
     font-weight: 400;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     color: var(--main-gray);
 }
 
@@ -95,7 +99,7 @@ main {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 .album__music-picked__btn button {
@@ -120,7 +124,7 @@ main {
 .album__likes {
     margin-left: 50px;
     background-color: var(--background-white);
-    box-shadow: 1px 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--main-box-shadow);
 }
 
 .album__likes-icon {
@@ -143,21 +147,191 @@ main {
 .album__music-detail {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: flex-start;
+    margin-bottom: 20px;
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+
+.album__music-detail:nth-child(2) {
+    box-shadow: var(--main-box-shadow);
+
 }
 
 .album__music-detail__cover img {
-    height: 170px;
-    width: 170px;
-    border-radius: 30px;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
     object-fit: cover;
-    margin-top: 50px;
+}
+
+.album__music-detail__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
 }
 
 .album__music-info {
-    padding-left: 30px;
+    padding-left: 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+}
+
+.album__music__artist {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: var(--main-gray);
+}
+
+.album__music__title {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--main-black);
+}
+
+.album__music-details {
+    font-size: 18px;
+    color: var(--main-gray);
+}
+
+.play-bar {
+    height: 120px;
+    width: 700px;
+    border: none;
+    background-color: var(--main-black);
+    border-radius: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 150px;
+}
+
+.play-bar__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.play-bar__artist {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--main-gray);
+    padding-bottom: 15px;
+}
+
+.play-bar__title {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--background-white);
+}
+
+.play-bar__progress {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--background-white);
+    margin-right: 30px;
+}
+
+.play-bar__progress i {
+    padding: 0 30px;
+
+}
+
+.play-bar__progress i:nth-child(2) {
+    font-size: 52px;
+}
+
+main > img {
+    height: 600px;
+    width: 600px;
+    border-radius: 7%;
+    object-fit: cover;
+    margin: 100px 0;
+    box-shadow: 0 30px 100px #085C2C;
+}
+
+.play__info div {
+    padding: 20px 0;
+}
+
+.play__title {
+    font-size: 52px;
+}
+
+.play__artist {
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--main-gray);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.play__progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 660px;
+}
+
+.play-progress__time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+    color: var(--main-gray);
+    font-weight: 400;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.play__time-now, .play__time-full {
+    font-size: 20px;
+}
+
+.play__bar-full {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 4px;
+    border: 1px solid var(--main-gray);
+    width: 100%;
+    background-color: var(--main-gray);
+    margin-bottom: 100px;
+}
+
+.play__bar-now {
+    height: 4px;
+    background-color: var(--main-black);
+    border: 1px solid var(--main-black);
+    width: 70%;
+}
+
+.play__bar-full i {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+}
+
+.play__controllers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
